@@ -405,7 +405,7 @@ def build_index():
      data-ad-client="ca-pub-2908004621823900"
      data-ad-slot="5820083954"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+     (adsbygoogle = window.adsbygoogle || []).push({{}});
 </script>
 
   </div>

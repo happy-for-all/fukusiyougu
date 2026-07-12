@@ -42,7 +42,7 @@ NOINDEX = True
 SITE_NAME = "補装具・日常生活用具ナビ"
 SITE_CATCH = "更新時期の管理と、用具選びの安心をひとつに"
 # ドメインは設計書8章の案。実際のカスタムドメイン確定後に書き換えてください。
-SITE_URL = "https://hosogu-navi.pray-power-is-god-and-cocoro.com"
+SITE_URL = "https://fukusiyougu.pray-power-is-god-and-cocoro.com"
 SITE_DESCRIPTION = (
     "補装具・日常生活用具の耐用年数と再支給の時期を無料で管理できるツールと、"
     "相談支援の実務経験に基づく用具の選び方・制度解説記事をまとめたサイトです。"

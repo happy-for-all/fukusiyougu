@@ -37,9 +37,10 @@ from content_data import (  # noqa: E402
 # ========================================================================
 
 # 【公開前チェックリスト】完成するまでは必ず True のままにしてください
-NOINDEX = True
+NOINDEX = False
 
 SITE_NAME = "補装具・日常生活用具ナビ"
+ADSENSE_CLIENT_ID = "ca-pub-2908004621823900"
 SITE_CATCH = "更新時期の管理と、用具選びの安心をひとつに"
 # ドメインは設計書8章の案。実際のカスタムドメイン確定後に書き換えてください。
 SITE_URL = "https://fukusiyougu.pray-power-is-god-and-cocoro.com"
@@ -91,10 +92,9 @@ def render_layout(title, meta_description, content_html, canonical_path="/",
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v=1">
 <!-- ============================================================
-     Google AdSense（スクリプトはページに1回だけ・head内で読み込む）
-     実際のAdSenseクライアントIDを取得次第、下記コメントアウトを解除してください。
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+     Google AdSense（スクリプトはページに1回だけ・head内で読み込む）     
      ============================================================ -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2908004621823900" crossorigin="anonymous"></script>     
 </head>
 <body>
 <a class="skip-link" href="#main-content">本文へスキップ</a>

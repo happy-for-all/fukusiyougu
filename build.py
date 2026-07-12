@@ -269,7 +269,7 @@ def build_index():
   </div>
 
   <div class="hero-inner">
-    <p class="hero-eyebrow">相談支援専門員・福祉用具担当者のための無料ツール</p>
+    <p class="hero-eyebrow">相談支援専門員・福祉用具担当者のための<br>無料ツール</p>
     <h1 class="hero-title">補装具・日常生活用具の<br>更新時期、まとめて見える化。</h1>
     <p class="hero-lead">{SITE_DESCRIPTION}</p>
     <p class="hero-note">登録不要・完全無料。入力内容はお使いの端末だけに保存されます。</p>
@@ -304,7 +304,7 @@ def build_index():
     <h2 class="section-title">利用者・用具の登録</h2>
     <form id="equipment-form" class="equipment-form" autocomplete="off">
       <div class="form-row">
-        <label for="input-user-name">利用者名（任意・この端末にのみ保存されます）</label>
+        <label for="input-user-name">利用者名<br>（任意・この端末にのみ保存されます）</label>
         <input type="text" id="input-user-name" name="userName" placeholder="例：A様">
       </div>
 
@@ -329,7 +329,7 @@ def build_index():
       </div>
 
       <div class="form-row">
-        <label for="input-memo">現場メモ（任意・自治体独自ルール等の記録に）</label>
+        <label for="input-memo">現場メモ<br>（任意・自治体独自ルール等の記録に）</label>
         <textarea id="input-memo" name="memo" rows="2"
           placeholder="例：〇〇市は申請に追加書類が必要"></textarea>
       </div>

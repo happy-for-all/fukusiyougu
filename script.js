@@ -459,10 +459,16 @@
         .forEach(function (row) {
           var item = row.item;
           var result = row.result;
+          var remainingLabel =
+            result.remainingDays >= 0
+              ? "あと" + result.remainingDays + "日"
+              : "期限超過（" + Math.abs(result.remainingDays) + "日経過）";
           html += "<div class='print-item'>";
           html += "<h3>" + escapeHtml(item.userName || "（未入力）") + "　／　" +
             escapeHtml(item.equipmentName || "") + "</h3>";
+          html += "<p>交付決定日：" + escapeHtml(item.decisionDate || "") + "</p>";
           html += "<p>次回申請可能時期：" + formatDate(result.nextApplicationDate) + "</p>";
+          html += "<p>残り日数：" + remainingLabel + "</p>";
           html += "<ul class='print-check-steps'>";
           result.schedule.forEach(function (step) {
             html += "<li>□ " + escapeHtml(step.label) + "（目安：" + formatDate(step.date) + "）</li>";

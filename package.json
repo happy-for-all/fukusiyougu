@@ -1,0 +1,11 @@
+{
+  "name": "fukusiyougu",
+  "private": true,
+  "description": "補装具・日常生活用具ナビ（動作検証用のNode.js依存関係のみを含む。サイト自体はPythonのbuild.pyで静的生成される）",
+  "scripts": {
+    "test": "node test_node.js"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1"
+  }
+}

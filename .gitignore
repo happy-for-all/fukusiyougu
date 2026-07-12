@@ -1,0 +1,6 @@
+# ビルド生成物（build.pyにより自動生成されるため、Gitでは管理しない）
+dist/
+
+# Node.js（動作検証用。npm installで復元できるため管理しない）
+node_modules/
+package-lock.json

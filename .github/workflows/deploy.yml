@@ -1,0 +1,33 @@
+name: Deploy to Cloudflare Workers
+
+# ------------------------------------------------------------------
+# このワークフローは「手動実行（workflow_dispatch）」のみで動作します。
+# GitHubリポジトリの「Actions」タブから、手動でボタンを押して実行してください。
+# ------------------------------------------------------------------
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # --- ソースコードの取得 ---
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # --- Python環境のセットアップ ---
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # --- distフォルダの生成（build.pyを実行） ---
+      - name: Build static site
+        run: python build.py
+
+      # --- Cloudflare Workersへのデプロイ ---
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: deploy

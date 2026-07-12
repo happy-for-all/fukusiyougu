@@ -394,6 +394,24 @@ def build_index():
     <a class="btn btn-outline" href="/articles/">記事一覧を見る</a>
   </div>
 </section>
+
+<section class="ad-section">
+  <div class="ad-section-inner">
+   
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2908004621823900"
+     data-ad-slot="5820083954"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  </div>
+</section>
+
+
 """
     return render_layout(
         title=f"{SITE_NAME}｜{SITE_CATCH}",

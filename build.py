@@ -134,6 +134,7 @@ def render_layout(title, meta_description, content_html, canonical_path="/",
   </div>
 </footer>
 
+<button type="button" id="back-to-top" class="back-to-top" aria-label="ページの一番上に戻る">↑</button>
 <script src="/script.js?v=1"></script>
 {script_extra}
 </body>

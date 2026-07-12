@@ -484,12 +484,36 @@
    * セクション10：初期化
    * -------------------------------------------------------------------- */
 
+  /* ----------------------------------------------------------------------
+   * セクション11：ページトップに戻るボタン（全ページ共通）
+   * -------------------------------------------------------------------- */
+  function initBackToTop() {
+    var button = document.getElementById("back-to-top");
+    if (!button) return;
+
+    function toggleVisibility() {
+      if (window.scrollY > 400) {
+        button.classList.add("is-visible");
+      } else {
+        button.classList.remove("is-visible");
+      }
+    }
+
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
+    toggleVisibility();
+
+    button.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
   function init() {
     var items = loadItems();
     renderTable(items);
     initForm();
     initCsvExport();
     initPrint();
+    initBackToTop();
   }
 
   if (document.readyState === "loading") {

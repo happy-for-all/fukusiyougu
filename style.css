@@ -344,6 +344,7 @@ textarea:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 0.4em;
+  min-width: 0;
 }
 
 .form-row label {
@@ -364,6 +365,8 @@ input[type="text"],
 input[type="date"],
 select,
 textarea {
+  width: 100%;
+  max-width: 100%;
   font-family: var(--font-body);
   font-size: 1rem;
   padding: 0.6em 0.7em;
@@ -371,6 +374,7 @@ textarea {
   border-radius: var(--radius-sm);
   background: #FDFDFB;
   color: var(--color-text);
+  box-sizing: border-box;
 }
 
 textarea {

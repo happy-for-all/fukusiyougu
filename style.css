@@ -153,10 +153,25 @@ textarea:focus-visible {
   font-size: 0.92rem;
   padding: 0.3em 0;
   border-bottom: 2px solid transparent;
+  white-space: nowrap;
 }
 
 .site-nav a:hover {
   border-bottom-color: var(--color-accent);
+}
+
+/* スマホ幅では、ナビを縦に折り返さず、横一列のまま横スクロール可能にする */
+@media (max-width: 640px) {
+  .site-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.9em;
+    padding-bottom: 0.2em;
+  }
+  .site-nav a {
+    font-size: 0.86rem;
+  }
 }
 
 /* ----------------------------------------------------------------------
@@ -735,5 +750,44 @@ textarea {
 
   body {
     background: #fff;
+  }
+}
+
+
+/* ページトップに戻るボタン */
+.back-to-top {
+  position: fixed;
+  right: 1.2em;
+  bottom: 1.2em;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 30;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--color-primary-dark);
+}
+
+@media print {
+  .back-to-top {
+    display: none !important;
   }
 }

@@ -706,10 +706,19 @@ def write_file(relative_path, content):
         f.write(content)
 
 
+# 変更後
 def copy_static_assets():
     shutil.copy(os.path.join(BASE_DIR, "style.css"), os.path.join(OUTPUT_DIR, "style.css"))
     shutil.copy(os.path.join(BASE_DIR, "script.js"), os.path.join(OUTPUT_DIR, "script.js"))
     write_file("favicon.svg", FAVICON_SVG)
+
+    # --- ads.txt を dist/ にコピー（無くてもビルドは止めない）---
+    ads_txt_path = os.path.join(BASE_DIR, "ads.txt")
+    if os.path.exists(ads_txt_path):
+        shutil.copy(ads_txt_path, os.path.join(OUTPUT_DIR, "ads.txt"))
+        print("コピー: ads.txt")
+    else:
+        print("⚠ 警告: ads.txt が見つからないためスキップしました")
 
 
 def main():
